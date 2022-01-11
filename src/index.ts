@@ -1,4 +1,5 @@
 import { Datatype } from './datatype';
+import { Hacker } from './hacker';
 import { Mersenne } from './mersenne';
 import { Random } from './random';
 
@@ -17,6 +18,7 @@ export class Faker {
 
   readonly mersenne: Mersenne = new Mersenne();
   random = new Random(this);
+  readonly hacker: Hacker = new Hacker(this);
   datatype: Datatype = new Datatype(this);
 
   constructor(opts: FakerOptions = {}) {
